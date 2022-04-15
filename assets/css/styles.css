@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  font-family: "Rubik", sans-serif;
+  display: flexbox;
+}
+
+/*header */
+
+.header {
+  background-color: #1a1b41;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.headerH1 {
+  display: flex;
+  align-items: center;
+  background-color: #1a1b41;
+  color: white;
+}
+
+/*Search Bar and Button */
+
+.sidePane1
+{
+    width: 35%;
+    height: 100%;
+    padding: 2%;
+    padding-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #6290c3;
+    
+}
+
+#sidePaneh2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6290c3;
+    margin-left: 3%;
+}
+
+#searchbar {
+    width: 100%;
+    padding: 1%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color:white; 
+    border-radius: 2%; 
+}
+
+#searchbtn{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1%;
+    margin-top: .5%;
+    margin-left: 3%;
+    background-color: #baff29;
+    text-align: center;
+}
+
+/*Side pane */
+.searchHistory{
+    width: 35%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #6290c3;
+}
+#cities {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1%;
+    margin-top: .5%;
+    margin-left: 3%;
+    background-color: #baff29;
+    text-align: center;
+}
+/*Wether Based on API PULL*/
+.weatherContainer{
+
+    padding: 10%;
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #f1ffe7;
+    margin-left: 39%;
+}
+
+/*Five Day Forecast */
+.fiveDayForecast {
+    
+    padding: 6%;
+    display: flexbox;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: #c2e7da;
+    margin-left: 39%;
+    position: relative; top: -400px;
+    border: 3px solid black;
+}
