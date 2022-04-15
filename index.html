@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
 
     <head>
@@ -25,30 +21,45 @@
         </header>
 
         <!--Side Panel and form-->
-        <section class="sidePane1"> 
-            <h2 id="sidePaneh2">Search for a City</h2>
-            <form action="submit">
-                <input id="searchbar" type="text">
-            </form>
-            <button id="searchbtn">Search</button>
-      
-       <!--Cities-->
+        <section class=" sidePane1">
+                <h2 id="sidePaneh2">Search for a City</h2>
+                <form action="submit">
+                    <input id="searchbar" type="text" placeholder="Enter a City">
+                </form>
+                <button id="searchbtn">Search</button>
+
+                <!--Cities-->
                 <div class="searchHistory">
- 
                 </div>
-        </section>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item history1">City Name 1</li>
+                    <li class="list-group-item">City Name 2</li>
+                    <li class="list-group-item">City Name 3</li>
+                    <li class="list-group-item">City Name 4</li>
+                    <li class="list-group-item">City Name 5</li>
+                    <li class="list-group-item">City Name 6</li>
+                    <li class="list-group-item">City Name 7</li>
+                    <li class="list-group-item">City Name 8</li>
+                </ul>
+                </div>
+                </aside>
 
-            <div class="weatherContainer">
-                <h2>Test</h2>
-            </div>
+                </div>
+                </section>
 
-            <div class="fiveDayForecast">
-                <h2 id="h2"> 5 Day Forecast:</h2>
-            </div>
-      
-                
+                <div class="weatherContainer">
+                    <h2>Test</h2>
+                </div>
 
-                <script src="" async defer></script>
+                <div class="fiveDayForecast">
+                    <h2 id="h2"> 5 Day Forecast:</h2>
+                </div>
+
+
+                <script type="text/javascript"
+                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+                <script src="assets/js/weather.js"></script>
+
     </body>
 
 </html>
