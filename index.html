@@ -48,16 +48,55 @@
                 </section>
 
                 <div class="weatherContainer">
-                    <h2>Test</h2>
+                    <div id="forecast">
+                        <p class="card-body forecast-temp">Temperature: </p>
+                        <p class="card-body forecast-hws">Humidity: 
+                        </p>
+                        <p class="card-body forecast-hws forecast-ws">Wind Speed: 
+                        </p>
+                        <p class="card-body forecast-uv">UV Index: <button type="button" class="btn btn-danger uv-button"></button>
+                        </p>
+                      </div>
                 </div>
 
                 <div class="fiveDayForecast">
-                    <h2 id="h2"> 5 Day Forecast:</h2>
+                    <div class="card container-fluid five-forecast">
+                        <h2 id="h2">5-Day Forecast:</h2>
+                        <button type="button" class="btn btn-primary forecast-one">
+                          <h5 class="forecast-ones">Date</h5>
+                          <p style="text-align: center;"><img id="icon-one" height="auto" width="auto"></p>
+                          <p class= "forecast-temp-one">Temp:</p>
+                          <p class="forecast-hum-one">Humidity:</p>
+                        </button>
+                        <button type="button" class="btn btn-primary forecast-other forecast-two" style="left: 200px;">
+                          <h5 class="forecast-twos">Date</h5>
+                          <p style="text-align: center;"><img id="icon-two" height="auto" width="auto"></p>
+                          <p class="forecast-temp-two">Temp:</p>
+                          <p class="forecast-hum-two">Humidity:</p>
+                        </button>
+                        <button type="button" class="btn btn-primary forecast-other forecast-three" style="left: 385px;">
+                          <h5 class="forecast-threes">Date</h5>
+                          <p style="text-align: center;"><img id="icon-three" height="auto" width="auto"></p>
+                          <p class="forecast-temp-three">Temp:</p>
+                          <p class="forecast-hum-three">Humidity:</p>
+                        </button>
+                        <button type="button" class="btn btn-primary forecast-other forecast-four" style="left: 570px;">
+                          <h5 class="forecast-fours">Date</h5>
+                          <p style="text-align: center;"><img id="icon-four" height="auto" width="auto"></p>
+                          <p class="forecast-temp-four">Temp:</p>
+                          <p class="forecast-hum-four">Humidity:</p>
+                        </button>
+                        <button type="button" class="btn btn-primary forecast-other forecast-five" style="left: 755px;">
+                          <h5 class="forecast-fives">Date</h5>
+                          <p style="text-align: center;"><img id="icon-five" height="auto" width="auto"></p>
+                          <p class="forecast-temp-five">Temp:</p>
+                          <p class="forecast-hum-five">Humidity:</p>
+                        </button>
                 </div>
 
 
                 <script type="text/javascript"
-                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
                 <script src="assets/js/weather.js"></script>
 
     </body>
