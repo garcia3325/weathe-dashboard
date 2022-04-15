@@ -36,6 +36,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #6290c3;
+    float: left;
     
 }
 
@@ -92,24 +93,26 @@
 /*Wether Based on API PULL*/
 .weatherContainer{
 
-    padding: 10%;
+    padding: 7%;
     display: flexbox;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #f1ffe7;
     margin-left: 39%;
+    border: 3px solid red;
+    position: relative;
 }
 
 /*Five Day Forecast */
 .fiveDayForecast {
     
-    padding: 6%;
+    padding: 7%;
     display: flexbox;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
     background-color: #c2e7da;
     margin-left: 39%;
-    position: relative; top: -400px;
+    position: relative; top: -10px;
     border: 3px solid black;
 }
