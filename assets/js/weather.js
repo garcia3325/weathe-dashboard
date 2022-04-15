@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //function that saves the user input as a search value
-    ("#searchbtn").on("click", function () {
+    $("#searchbtn").on("click", function () {
         var searchValue = $("#searchbar").val()
         console.log(searchValue)
         $("#searchbar").val("")
