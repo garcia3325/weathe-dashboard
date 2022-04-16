@@ -28,7 +28,7 @@
 
 .sidePane1 {
   width: auto;
-  height: auto;
+  height: 100%;
   padding: 2%;
   padding-bottom: 20%;
   display: flex;
@@ -40,7 +40,9 @@
 }
 
 #sidePaneh2 {
-  display: flex;
+    width: auto;
+    height: 100%;
+    display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 3%;
@@ -124,4 +126,8 @@
     font-size: 22px;
     padding: 5%;
     margin-left: 10%;
+}
+
+#today{
+    margin-left: 20%;
 }

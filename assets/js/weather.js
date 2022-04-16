@@ -1,17 +1,20 @@
 $(document).ready(function () {
   //function that saves the user input as a search value
+  let cityHistory = JSON.parse(localStorage.getItem("searchHistory"));
+  console.log(cityHistory);
+
   $("#searchbtn").on("click", function () {
     var searchValue = $("#searchbar").val();
     console.log(searchValue);
-    $("#searchbar").val("");
 
+    // cityHistory.push(searchValue);
+    localStorage.setItem("searchHistory", JSON.stringify(searchValue));
     searchWeather(searchValue);
   });
 
   $("#searchbtn").on("click", function () {
     var searchHistory = $("#searchbar").val();
     console.log(searchHistory);
-    localStorage.setItem("history", JSON.stringify(searchHistory));
   });
 
   //apiKey from openweatherAPI
