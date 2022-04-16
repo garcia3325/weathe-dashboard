@@ -33,13 +33,6 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">City Name 1</li>
-                    <li class="list-group-item">City Name 2</li>
-                    <li class="list-group-item">City Name 3</li>
-                    <li class="list-group-item">City Name 4</li>
-                    <li class="list-group-item">City Name 5</li>
-                    <li class="list-group-item">City Name 6</li>
-                    <li class="list-group-item">City Name 7</li>
-                    <li class="list-group-item">City Name 8</li>
                 </ul>
                 </div>
                 </aside>
@@ -48,7 +41,13 @@
                 </section>
 
                 <div class="weatherContainer">
-                    <div id="forecast">
+                  <div class="card cityweather">
+                    <div id="today" class="mt-3 card-body" style="margin-bottom: 20px;">
+                      <h2 class="card-title city-name" style="font-size: large;">Enter a City</h2>
+                      <div class="col-md-2 image-div"><img id="icon-main" height="100px" width="100px"></div>
+                    </div>
+
+                  <div id="forecast">
                         <p class="card-body forecast-temp">Temperature: </p>
                         <p class="card-body forecast-hws">Humidity: 
                         </p>
@@ -60,44 +59,43 @@
                 </div>
 
                 <div class="fiveDayForecast">
-                        
+                        <section style="flex: auto;"
                         <h2 id="h2">5-Day Forecast:</h2>
                         <br>
-                        <button type="button" class="btn btn-primary forecast-one">
-                          <h5 class="forecast-ones">Date</h5>
-                          <p style="text-align: center;"><img id="icon-one" height="auto" width="auto"></p>
-                          <p class= "forecast-temp-one">Temp:</p>
-                          <p class="forecast-hum-one">Humidity:</p>
+                        <button type="button" class="btn btn-primary forecast-other forecast-one" style="left: 200px;background-color:wheat">
+                          <h5 class="forecast-ones"style="font-size: medium;">Date</h5>
+                          <p style="text-align: center;"><img id="icon-one" height="100px" width="100px"></p>
+                          <p class= "forecast-temp-one"style="font-size: medium;">Temp:</p>
+                          <p class="forecast-hum-one"style="font-size: medium;">Humidity:</p>
                         </button>
-                        <button type="button" class="btn btn-primary forecast-two" style="left: 200px;">
-                          <h5 class="forecast-twos">Date</h5>
-                          <p style="text-align: center;"><img id="icon-two" height="auto" width="auto"></p>
-                          <p class="forecast-temp-two">Temp:</p>
-                          <p class="forecast-hum-two">Humidity:</p>
+                        <button type="button" class="btn btn-primary forecast-other forecast-two" style="left: 200px;background-color: wheat;">
+                          <h5 class="forecast-twos"style="font-size: medium;">Date</h5>
+                          <p style="text-align: center;"><img id="icon-two" height="100px" width="100px"></p>
+                          <p class="forecast-temp-two"style="font-size: medium;">Temp:</p>
+                          <p class="forecast-hum-two"style="font-size: medium;">Humidity:</p>
                         </button>
-                        <button type="button" class="btn btn-primary forecast-other forecast-three" style="left: 385px;">
-                          <h5 class="forecast-threes">Date</h5>
-                          <p style="text-align: center;"><img id="icon-three" height="auto" width="auto"></p>
-                          <p class="forecast-temp-three">Temp:</p>
-                          <p class="forecast-hum-three">Humidity:</p>
+                        <button type="button" class="btn btn-primary forecast-other forecast-three" style="left: 385px;background-color: wheat;">
+                          <h5 class="forecast-threes"style="font-size: medium;">Date</h5>
+                          <p style="text-align: center;"><img id="icon-three" height="100px" width="100px"></p>
+                          <p class="forecast-temp-three", style="font-size: medium;">Temp:</p>
+                          <p class="forecast-hum-three", style="font-size: medium;">Humidity:</p>
                         </button>
-                        <button type="button" class="btn btn-primary forecast-other forecast-four" style="left: 570px;">
-                          <h5 class="forecast-fours">Date</h5>
-                          <p style="text-align: center;"><img id="icon-four" height="auto" width="auto"></p>
-                          <p class="forecast-temp-four">Temp:</p>
-                          <p class="forecast-hum-four">Humidity:</p>
+                        <button type="button" class="btn btn-primary forecast-other forecast-four" style="left: 570px;background-color: wheat;">
+                          <h5 class="forecast-fours"style="font-size: medium;">Date</h5>
+                          <p style="text-align: center;"><img id="icon-four" height="100px" width="100px"></p>
+                          <p class="forecast-temp-four"style="font-size: medium;">Temp:</p>
+                          <p class="forecast-hum-four"style="font-size: medium;">Humidity:</p>
                         </button>
-                        <button type="button" class="btn btn-primary forecast-other forecast-five" style="left: 755px;">
-                          <h5 class="forecast-fives">Date</h5>
-                          <p style="text-align: center;"><img id="icon-five" height="auto" width="auto"></p>
-                          <p class="forecast-temp-five">Temp:</p>
-                          <p class="forecast-hum-five">Humidity:</p>
+                        <button type="button" class="btn btn-primary forecast-other forecast-five" style="left: 755px; background-color: wheat;">
+                          <h5 class="forecast-fives"style="font-size: medium;">Date</h5>
+                          <p style="text-align: center;"><img id="icon-five" height="100px" width="100px"></p>
+                          <p class="forecast-temp-five"style="font-size: medium;">Temp:</p>
+                          <p class="forecast-hum-five"style="font-size: medium;">Humidity:</p>
                         </button>
                 </div>
 
 
-                <script type="text/javascript"
-                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                 <script src="assets/js/weather.js"></script>
 
     </body>
