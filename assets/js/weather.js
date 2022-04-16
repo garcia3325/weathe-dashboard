@@ -31,8 +31,8 @@ $(document).ready(function () {
         //formula to convert Kelvin to Fahrenheit
         let tempF = ((data.main.temp - 273.15) * 1.8 + 32).toFixed(1);
 
-        //setting variables for lattitude and longitude for the UV api call
-        let lattitude = data.coord.lat;
+        //setting variables for latitude and longitude for the UV api call
+        let latitude = data.coord.lat;
         let longitude = data.coord.lon;
 
         //Grabbing the values from the data object and assigning them to HTML ids
@@ -45,7 +45,7 @@ $(document).ready(function () {
           type: "GET",
           url:
             "https://api.openweathermap.org/data/2.5/uvi?lat=" +
-            lattitude +
+            latitude +
             "&lon=" +
             longitude +
             "&appid=" +
@@ -55,12 +55,26 @@ $(document).ready(function () {
             //grabbing the value from the data object and assigning it to the HTML id
             $(".uv-button").text(data2.value);
 
+            var uvIndex = uviResponse.value;
+           
+            if (uvIndex >= 0 && uvIndex <= 2) {
+              $("#uvIndexColor").css("background-color", "#3EA72D").css("color", "white");
+          } else if (uvIndex >= 3 && uvIndex <= 5) {
+              $("#uvIndexColor").css("background-color", "#FFF300");
+          } else if (uvIndex >= 6 && uvIndex <= 7) {
+              $("#uvIndexColor").css("background-color", "#F18B00");
+          } else if (uvIndex >= 8 && uvIndex <= 10) {
+              $("#uvIndexColor").css("background-color", "#E53210").css("color", "white");
+          } else {
+              $("#uvIndexColor").css("background-color", "#B567A4").css("color", "white"); 
+          };  
+
             //third AJAX call to get the five day forecast
             $.ajax({
               type: "GET",
               url:
                 "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-                lattitude +
+                latitude +
                 "&lon=" +
                 longitude +
                 "&exclude=hourly,minutely,current,alerts&appid=" +
@@ -85,64 +99,53 @@ $(document).ready(function () {
                   console.log(formattedTime);
                   return formattedTime;
 
-                  //grabbing the forecast date and assigning them to the HTML
-                  $(".forecast-ones").text(timeConverter(dayOne));
-                  $(".forecast-twos").text(timeConverter(dayTwo));
-                  $(".forecast-threes").text(timeConverter(dayThree));
-                  $(".forecast-fours").text(timeConverter(dayFour));
-                  $(".forecast-fives").text(timeConverter(dayFive));
+//url for the icons
+let iconURL = "https://openweathermap.org/img/wn/";
 
-                  //Kelvin to Fahrenheit formula
-                  let tempFOne = (
-                    (data3.daily[1].temp.max - 273.15) * 1.8 +
-                    32
-                  ).toFixed(1);
-                  let tempFTwo = (
-                    (data3.daily[2].temp.max - 273.15) * 1.8 +
-                    32
-                  ).toFixed(1);
-                  let tempFThree = (
-                    (data3.daily[3].temp.max - 273.15) * 1.8 +
-                    32
-                  ).toFixed(1);
-                  let tempFFour = (
-                    (data3.daily[4].temp.max - 273.15) * 1.8 +
-                    32
-                  ).toFixed(1);
-                  let tempFFive = (
-                    (data3.daily[5].temp.max - 273.15) * 1.8 +
-                    32
-                  ).toFixed(1);
+//grabbing city name value and assigning them to the HTML
+$(".city-name").text(searchValue + " " + timeConverter(today));
 
-                  //grabbing the forecast temp and assigning them to the HTML
-                  $(".forecast-temp-one").text("Temp: " + tempFOne);
-                  $(".forecast-temp-two").text("Temp: " + tempFTwo);
-                  $(".forecast-temp-three").text("Temp: " + tempFThree);
-                  $(".forecast-temp-four").text("Temp: " + tempFFour);
-                  $(".forecast-temp-five").text("Temp: " + tempFFive);
+//grabbing icon value and assigning them to the HTML
+$("#icon-main").attr("src", iconURL + data3.daily[0].weather[0].icon + ".png")
+$("#icon-one").attr("src", iconURL + data3.daily[1].weather[0].icon + ".png")
+$("#icon-two").attr("src", iconURL + data3.daily[1].weather[0].icon + ".png")
+$("#icon-three").attr("src", iconURL + data3.daily[1].weather[0].icon + ".png")
+$("#icon-four").attr("src", iconURL + data3.daily[1].weather[0].icon + ".png")
+$("#icon-five").attr("src", iconURL + data3.daily[1].weather[0].icon + ".png")
 
-                  //grabbing the forecast humidity data and assigning them to the HTML
-                  $(".forecast-hum-one").text(
-                    "Humidity: " + data3.daily[1].humidity
-                  );
-                  $(".forecast-hum-two").text(
-                    "Humidity: " + data3.daily[2].humidity
-                  );
-                  $(".forecast-hum-three").text(
-                    "Humidity: " + data3.daily[3].humidity
-                  );
-                  $(".forecast-hum-four").text(
-                    "Humidity: " + data3.daily[4].humidity
-                  );
-                  $(".forecast-hum-five").text(
-                    "Humidity: " + data3.daily[5].humidity
-                  );
+//grabbing the forecast date and assigning them to the HTML
+$(".forecast-ones").text(timeConverter(dayOne));
+$(".forecast-twos").text(timeConverter(dayTwo));
+$(".forecast-threes").text(timeConverter(dayThree));
+$(".forecast-fours").text(timeConverter(dayFour));
+$(".forecast-fives").text(timeConverter(dayFive));
+
+//Kelvin to Fahrenheit formula
+let tempFOne = ((data3.daily[1].temp.max - 273.15) * 1.80 + 32).toFixed(1);
+let tempFTwo = ((data3.daily[2].temp.max - 273.15) * 1.80 + 32).toFixed(1);
+let tempFThree = ((data3.daily[3].temp.max - 273.15) * 1.80 + 32).toFixed(1);
+let tempFFour = ((data3.daily[4].temp.max - 273.15) * 1.80 + 32).toFixed(1);
+let tempFFive = ((data3.daily[5].temp.max - 273.15) * 1.80 + 32).toFixed(1);
+
+//grabbing the forecast temp and assigning them to the HTML
+$(".forecast-temp-one").text("Temp: " + tempFOne);
+$(".forecast-temp-two").text("Temp: " + tempFTwo);
+$(".forecast-temp-three").text("Temp: " + tempFThree);
+$(".forecast-temp-four").text("Temp: " + tempFFour);
+$(".forecast-temp-five").text("Temp: " + tempFFive);
+
+//grabbing the forecast humidity data and assigning them to the HTML
+$(".forecast-hum-one").text("Humidity: " + data3.daily[1].humidity);
+$(".forecast-hum-two").text("Humidity: " + data3.daily[2].humidity);
+$(".forecast-hum-three").text("Humidity: " + data3.daily[3].humidity);
+$(".forecast-hum-four").text("Humidity: " + data3.daily[4].humidity);
+$(".forecast-hum-five").text("Humidity: " + data3.daily[5].humidity);
                 }
-              },
-            });
-          },
-        });
-      },
-    });
+              }
+            })
+          }
+        })
+      }
+    })
   }
-});
+})
