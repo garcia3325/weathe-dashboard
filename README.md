@@ -4,7 +4,7 @@ This is a weather dashboard with form inputs that will run in the browser and fe
 
 OpenWeather API is used to retrieve weather data for cities. And localStorage is used to store persistent data.
 
-#Functionality
+##Functionality
 When searched for a city, the current and future conditions for that city will be presented and that city is added to the search history
 
 When viewing current weather conditions for the city, the following is shown:
@@ -28,7 +28,7 @@ When viewing the future weather conditions for the city, a 5-day forecast will b
 When a city in the search history is clicked, the current and future conditions for that city is presented again
 
 
-#Features
+##Features
 - HTML
 - CS
 - jQuery
