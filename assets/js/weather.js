@@ -59,16 +59,15 @@ $(document).ready(function () {
             $(".uv-button").text(data2.value);
 
             console.log(data2.value);
-
             if (data2.value >= 0 && data2.value <= 2) {
-              document.getElementById("uv").style.backgroundColor = '#AAFF00';
-          } else if (data2.value >= 3 && data2.value <= 5) {
-            document.getElementById("uv").style.backgroundColor = "#FFF300";
-          } else if (data2.value >= 6 && data2.value <= 7) {
-            document.getElementById("uv").style.backgroundColor =  "#F18B00";
-          } else (data2.value >9 && data2.value < 10); {
-            document.getElementById("uv").style.backgroundColor ="#E53210"; 
-          };  
+              document.getElementById("uv").style.backgroundColor = "#AAFF00";
+            } else if (data2.value > 2 && data2.value <= 5) {
+              document.getElementById("uv").style.backgroundColor = "#FFF300";
+            } else if (data2.value > 5 && data2.value <= 7) {
+              document.getElementById("uv").style.backgroundColor = "#F18B00";
+            } else {
+              document.getElementById("uv").style.backgroundColor = "#E53210";
+            }
 
 
             //third AJAX call to get the five day forecast
