@@ -33,3 +33,6 @@ When a city in the search history is clicked, the current and future conditions 
 - CS
 - jQuery
 - Server-Side API - OpenWeather API
+
+# Site Deployed
+https://garcia3325.github.io/weather-dashboard/
