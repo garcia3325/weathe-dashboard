@@ -17,7 +17,8 @@ When viewing current weather conditions for the city, the following is shown:
 - Wind speed
 - UV index
 - When viewing the UV index, it is presented with a color indicating severity 
-- When viewing the future weather conditions for the city, a 5-day forecast will be presented with the following information:
+
+When viewing the future weather conditions for the city, a 5-day forecast will be presented with the following information:
 
 - Date
 - An icon representation of weather conditions
