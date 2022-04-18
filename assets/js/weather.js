@@ -1,7 +1,5 @@
 $(document).ready(function () {
   //function that saves the user input as a search value
-  let cityHistory = JSON.parse(localStorage.getItem("searchHistory"));
-  console.log(cityHistory);
 
   $("#searchbtn").on("click", function () {
     var searchValue = $("#searchbar").val();
@@ -11,6 +9,12 @@ $(document).ready(function () {
     localStorage.setItem("searchHistory", JSON.stringify(searchValue));
     searchWeather(searchValue);
   });
+  let cityHistory = JSON.parse(localStorage.getItem("searchHistory"));
+  console.log(cityHistory);
+
+let div = document.createElement("div")
+let p = document.createElement("cityHistory")
+div.append(p)
 
   $("#searchbtn").on("click", function () {
     var searchHistory = $("#searchbar").val();
